@@ -7,5 +7,10 @@ import Page from "./page";
 
 it("App Router: Works with Server Components", () => {
   render(<Page />);
-  expect(screen.getByRole("heading")).toHaveTextContent("Hello, World!");
+  expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+    "Leap Year Calculator",
+  );
+  expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(
+    "Coming Soon!",
+  );
 });

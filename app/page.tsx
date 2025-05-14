@@ -3,8 +3,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <div>
-    <h1>Leap Year Calculator</h1>
-  <h2>Coming Soon!</h2>
-  </div>;
+  return (
+    <div>
+      <h1>Leap Year Calculator</h1>
+      <h2>Coming Soon!</h2>
+    </div>
+  );
 }
