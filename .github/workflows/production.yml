@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+      - name: check versions
+        run: node -v && npm -v
       - name: install dependencies
         run: npm ci
       - name: Linting
