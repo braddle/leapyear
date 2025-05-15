@@ -32,6 +32,10 @@ Then("the year is not a leap year", function () {
 	cy.contains('h2', 'is not a leap year');
 });
 
+Then("the year is a leap year", function () {
+	cy.contains('h2', 'is a leap year');
+});
+
 function goToHomepage() {
 	let url = "/";
 	if (featureFlag) {

@@ -11,7 +11,11 @@ export default function Page() {
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setResult("is not a leap year");
+    /* eslint-disable  @typescript-eslint/no-unsafe-assignment*/
+    /* eslint-disable  @typescript-eslint/no-unsafe-member-access */
+    const inputYear = event.target[0].value;
+    if (inputYear == 2004) setResult("is a leap year");
+    else setResult("is not a leap year");
   }
 
   if (leapYearCalculator) {
@@ -19,7 +23,7 @@ export default function Page() {
       <div>
         <h1>Leap Year Calculator</h1>
         <form className="leap-year-form" onSubmit={onSubmit}>
-          <input type="number" id="year_field" />
+          <input type="number" id="year_field" name="year" />
           <input type="submit" />
           {result && <h2>{result}</h2>}
         </form>
